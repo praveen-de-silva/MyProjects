@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Praveen De Silva - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Logo_use.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Undergraduate of UoM | Programmer</p>
+                
+                <h1>Hi I'm <span>Praveen</span> De Silva<br> from Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+
+    <!---------- about ---------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pds_dp1.jpg" alt="Profile" class="profile">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hi, I'm Praveen De Silva, an undergraduate of University of Moratuwa, Sri Lanka. I'm a programmer who is passionate about coding and developing software. I'm also a tech enthusiast who loves to explore new technologies and learn new things. I'm currently learning web development and I'm looking forward to become a full stack developer in the future.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Learned programming languages : Python, C, C#, C++, Java</li>
+                            <li><span>Web Developping</span><br>Learned languages : HTML, CSS</li>
+                            <li><span>Graphic Designing</span><br>Learned tools : Adobe Photoshop, Adobe PremirePro, Canva</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        currently none
+                    </div>
+
+                    <div class="tab-contents" id ="education">
+                        <ul>
+                            <li><span>School Education at Kingswood College Kandy</span><br>From 2008 to 2022</li>
+                            <li><span>GCE O/Ls in 2019</span><br>Obtained 9As</li>
+                            <li><span>GCE A/Ls in 2022</span><br>Obtained 3As in Physical science stream. Z-Score : 2.5895 | IR : 152</li>
+                            <li><span>Completed Diploma in IT and English at ESOFT</span><br>From 2023 March 2024 January</li>
+                            <li><span>Studing Computer Science Engineering at UoM</span><br>Since 2024 March</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------- services ---------->
+
+
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+                
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+
+</html>

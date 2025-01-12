@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+#header {
+    background-image: url("images/Background2_use.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+body {
+    background-image: url("images/Background1_use.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+p {
+    font-size: 18px;
+}
+
+
+.container {
+    padding: 10px 10%;
+}
+.logo {
+    width: 450px;
+    height: auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(122, 211, 255);
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: rgb(122, 211, 255);
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    padding: 10px 20px;
+    color: rgb(122, 211, 255);
+    font-size: 20px;
+}
+.header-text h1 {
+    color: rgb(1, 135, 201);
+}
+.header-text h1 span{
+    color: rgb(88, 197, 251);
+}
+
+/* -------- about -------- */
+
+#about {
+    padding: 80px 0;
+    color: rgb(122, 211, 255);
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-wrap: wrap;
+}
+.about-col-1  img{
+    width: 500px;
+    flex-basis: 48%;
+    border-radius: 10px;
+}
+.about-col-2 {
+    flex-basis: 48%;
+}
+.sub-title {
+    font-size: 30px;
+    color: rgb(1, 135, 201);
+
+    border-bottom-style: double;
+    border-width: 5px;
+    border-color: rgba(0, 62, 148, 0.567);
+    padding: 5px;
+
+    margin-bottom: 10px;
+}
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgb(122, 211, 255);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    
+    margin: 10px 0;
+}
+.tab-contents ul li span {
+    color: rgb(1, 135, 201);
+    font-size: 18px;
+}
+.tab-contents#experience {
+    color: rgb(1, 135, 201);
+    font-size: 18px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* -------- services -------- */
+
