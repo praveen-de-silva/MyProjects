@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Praveen De Silva - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e8e57a01dd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,18 +14,22 @@
         <div class="container">
             <nav>
                 <img src="images/Logo_use.png" alt="logo" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sideMenu">
+                    <li><a href="#header" onclick="closeMenu()">Home</a></li>
+                    <li><a href="#about" onclick="closeMenu()">About</a></li>
+                    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                    <i id="hidebar" class="fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
                 </ul>
+                <i id="hidebar" class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
+            <br><br><br>
             <div class="header-text">
-                <p>Undergraduate of UoM | Programmer</p>
+                <p>Undergraduate of UoM</p>
                 
-                <h1>Hi I'm <span>Praveen</span> De Silva<br> from Sri Lanka</h1>
+                <h1>Hi I'm <span>Praveen</span>&nbsp;De&nbsp;Silva<br> from Sri Lanka</h1>
+                <br><br><br>
             </div>
         </div>
     </div>
@@ -39,7 +44,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
-                    <p>Hi, I'm Praveen De Silva, an undergraduate of University of Moratuwa, Sri Lanka. I'm a programmer who is passionate about coding and developing software. I'm also a tech enthusiast who loves to explore new technologies and learn new things. I'm currently learning web development and I'm looking forward to become a full stack developer in the future.</p>
+                    <p id="para">Hi, I'm Praveen De Silva, an undergraduate of University of Moratuwa, Sri Lanka who is passionate about coding and developing software. I'm also a tech enthusiast who loves to explore new technologies and learn new things. I'm currently learning computer science, web development.</p>
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -49,8 +54,8 @@
 
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming</span><br>Learned programming languages : Python, C, C#, C++, Java</li>
-                            <li><span>Web Developping</span><br>Learned languages : HTML, CSS</li>
+                            <li><span>Programming</span><br>Learning programming languages : Python, C, C#, C++, Java</li>
+                            <li><span>Web Developping</span><br>Learning languages : HTML, CSS</li>
                             <li><span>Graphic Designing</span><br>Learned tools : Adobe Photoshop, Adobe PremirePro, Canva</li>
                         </ul>
                     </div>
@@ -75,10 +80,110 @@
 
     <!---------- services ---------->
 
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2 class="sub-title2">Programming</h2>
+                    <p>I am learning to develop software applications for your business or personal use. I will develop desktop applications, mobile applications and web applications.</p>
+                    <a href="https://www.hackerrank.com/profile/praveen_de_silva" alt="To view my hackerrank profile">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    <h2 class="sub-title2">Web Designing</h2>
+                    <p>I can design and develop websites for your business or personal use. I can create responsive websites that can be viewed on any device.</p>
+                    <a href="">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-palette"></i>
+                    <h2 class="sub-title2">Graphic Designing</h2>
+                    <p>I can design logos, banners, posters, business cards and other graphic designs for your business or personal use.</p>
+                    <a href="https://www.hackerrank.com/profile/praveen_de_silva" alt="To view creations">learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!---------- portfolio ---------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work_posters_use.jpg" alt="work1">
+                    <div class="layer">
+                        <h2 class="sub-title2">Poster Design</h2>
+                        <p>Designed posters for a local event</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work_posters_use.jpg" alt="work1">   
+                    <div class="layer">
+                        <h2 class="sub-title2">BookMarks Design</h2>
+                        <p>Designed posters for a local event</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work_posters_use.jpg" alt="work1">
+                    <div class="layer">
+                        <h2 class="sub-title2">Birthday Wishes Design</h2>
+                        <p>Designed posters for a local event</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!---------- contact info ---------->
+
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p><i class="fa-regular fa-envelope"></i> pdsilva496@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +94 70 2241 222</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="documents/praveen_cv.pdf" class="btn btn2" download>Download CV</a>   
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <div id="msg"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; Praveen de Silva</p>
+        </div>
+    </div>
 
     <script>
         var tabLinks = document.getElementsByClassName("tab-links");
         var tabContents = document.getElementsByClassName("tab-contents");
+        var sideMenu = document.getElementById("sideMenu");
 
         function opentab(tabName) {
             for (tabLink of tabLinks) {
@@ -91,7 +196,37 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabName).classList.add("active-tab");
         }
+
+        function openMenu() {
+            sideMenu.style.right = "0";
+            document.querySelector("nav .fa-solid.fa-bars").style.display = "none";
+        }
+        function closeMenu() {
+            sideMenu.style.right = "-200px";
+            document.querySelector("nav .fa-solid.fa-bars").style.display = "block";
+        }
     </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwTu30oR6FN99ZWOJAWL22PWRy1IICUXySw_89R2hfq8k56FfvYEnsA1VIHDFQj7dY/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+
+                setTimeout(function() {
+                    msg.innerHTML = ""
+                }, 5000)
+
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+  </script>
 
 </body>
 
