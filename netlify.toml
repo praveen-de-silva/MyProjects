@@ -1,6 +1,6 @@
 [build]
   base = "My Portfolio"
-  publish = "My Portfolio"
+  publish = "."
   command = ""
 
 [[redirects]]
