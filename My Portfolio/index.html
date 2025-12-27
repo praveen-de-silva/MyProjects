@@ -20,16 +20,14 @@
                     <li><a href="#services" onclick="closeMenu()">Services</a></li>
                     <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
                     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                    <i id="hidebar" class="fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
+                    <i class="fa-regular fa-circle-xmark menu-close" onclick="closeMenu()"></i>
                 </ul>
-                <i id="hidebar" class="fa-solid fa-bars" onclick="openMenu()"></i>
+                <i class="fa-solid fa-bars menu-open" onclick="openMenu()"></i>
             </nav>
-            <br><br><br>
             <div class="header-text">
                 <p>Undergraduate of UoM</p>
                 
                 <h1>Hi I'm  <br><span>Praveen</span>&nbsp;De&nbsp;Silva<br> from Sri Lanka</h1>
-                <br><br><br>
             </div>
         </div>
     </div>
@@ -197,14 +195,20 @@
             document.getElementById(tabName).classList.add("active-tab");
         }
 
+        function isMobileMenu() {
+            return window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+        }
+
         function openMenu() {
-            sideMenu.style.right = "0";
-            var bars = document.querySelector("nav .fa-solid.fa-bars");
+            if (!isMobileMenu()) return;
+            sideMenu.classList.add("menu-active");
+            var bars = document.querySelector("nav .menu-open");
             if (bars) bars.style.visibility = "hidden";
         }
         function closeMenu() {
-            sideMenu.style.right = "-200px";
-            var bars = document.querySelector("nav .fa-solid.fa-bars");
+            if (!isMobileMenu()) return;
+            sideMenu.classList.remove("menu-active");
+            var bars = document.querySelector("nav .menu-open");
             if (bars) bars.style.visibility = "visible";
         }
     </script>
