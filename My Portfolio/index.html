@@ -199,11 +199,13 @@
 
         function openMenu() {
             sideMenu.style.right = "0";
-            document.querySelector("nav .fa-solid.fa-bars").style.display = "none";
+            var bars = document.querySelector("nav .fa-solid.fa-bars");
+            if (bars) bars.style.visibility = "hidden";
         }
         function closeMenu() {
             sideMenu.style.right = "-200px";
-            document.querySelector("nav .fa-solid.fa-bars").style.display = "block";
+            var bars = document.querySelector("nav .fa-solid.fa-bars");
+            if (bars) bars.style.visibility = "visible";
         }
     </script>
     

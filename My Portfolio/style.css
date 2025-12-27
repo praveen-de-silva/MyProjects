@@ -13,9 +13,11 @@ html {
 #header {
     background-image: url("images/Background2_use.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 body {
     background-image: url("images/Background1_use.jpg");
@@ -59,6 +61,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 nav ul li {
     list-style: none;
@@ -87,7 +90,8 @@ nav ul li a:hover::after {
     width: 100%;
 }
 .header-text {
-    margin-top: clamp(100px, 20vh, 200px);
+    margin-top: auto;
+    margin-bottom: clamp(40px, 8vh, 80px);
     padding: 20px;
     color: rgb(122, 211, 255);
     font-size: clamp(18px, 2vw, 20px);
@@ -460,6 +464,8 @@ nav #hidebar {
 @media only screen and (max-width: 768px) {
     #header {
         background-image: url("images/Background2_phone_use.jpg");
+        background-position: center bottom;
+        min-height: 100vh;
     }
     .logo {
         width: 300px;
@@ -468,7 +474,6 @@ nav #hidebar {
         font-size: 16px;
     }
     .header-text {
-        margin-top: clamp(120px, 25vh, 250px);
         font-size: clamp(16px, 2.5vw, 18px);
         padding: 15px;
     }
@@ -478,7 +483,11 @@ nav #hidebar {
         display: block;
     }
     nav .fa-solid.fa-bars {
-        transition: display 0.5s;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 1;
     }
     nav ul {
         background: rgba(2, 14, 31, 0.75);
@@ -500,10 +509,6 @@ nav #hidebar {
         top: 25px;
         left: 20px;
         cursor: pointer;
-    }
-    nav #hidebar {
-        position:fixed;
-        right: 25px;
     }
 
     /* -------- about -------- */
