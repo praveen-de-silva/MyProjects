@@ -62,30 +62,6 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(0, 62, 148, 0.5);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav::before,
-nav::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    width: 150px;
-    height: 2px;
-    background: linear-gradient(to right, transparent, rgba(0, 62, 148, 0.5));
-    pointer-events: none;
-}
-
-nav::before {
-    left: 0;
-    background: linear-gradient(to right, transparent, rgba(0, 62, 148, 0.5));
-}
-
-nav::after {
-    right: 0;
-    background: linear-gradient(to left, transparent, rgba(0, 62, 148, 0.5));
 }
 nav ul li {
     list-style: none;
@@ -119,6 +95,8 @@ nav ul li a:hover::after {
     padding: 20px;
     color: rgb(122, 211, 255);
     font-size: clamp(18px, 2vw, 20px);
+    align-self: flex-start;
+    max-width: 100%;
 }
 .header-text h1 {
     color: rgb(1, 135, 201);
